@@ -10,7 +10,7 @@ export function Home() {
         <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-[40px] overflow-hidden shadow-2xl bg-purple-200 group">
           <img
             className="w-full h-full object-cover transition duration-500 ease-in-out group-hover:scale-110"
-            src="/images/Pasted image.png"
+            src="/images/anjana.png"
             alt="Anjana Profile"
             onError={(e) => {
               // Fallback placeholder if your local image isn't rendering yet
