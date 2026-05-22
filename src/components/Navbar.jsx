@@ -4,13 +4,14 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Scroll effect
+  // Scroll Effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -27,16 +28,17 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 w-full z-[9999] transition-all duration-300 border-b flex items-center ${
         scrolled
-          ? "bg-slate-900/90 border-slate-800 shadow-xl backdrop-blur-lg h-20"
-          : "bg-transparent border-transparent h-24"
+          ? "bg-black/90 border-gray-800 shadow-2xl backdrop-blur-xl h-20"
+          : "bg-black/70 border-transparent backdrop-blur-md h-24"
       }`}
     >
       <div className="max-w-6xl w-full mx-auto px-6 flex items-center justify-between">
 
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2 z-[10000]">
-          <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse" />
-          <span className="text-xl font-black text-white">
+          <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+
+          <span className="text-2xl font-black text-white tracking-wide">
             ANJANA<span className="text-red-500">.</span>
           </span>
         </a>
@@ -47,27 +49,29 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-slate-300 hover:text-white font-semibold relative group"
+              className="text-gray-300 hover:text-red-400 font-semibold relative group transition duration-300"
             >
               {link.name}
-              <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-red-500 group-hover:w-full transition-all"></span>
+
+              {/* Underline */}
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-500 group-hover:w-full transition-all duration-300"></span>
             </a>
           ))}
         </div>
 
-        {/* Mobile Button */}
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-white text-2xl focus:outline-none z-[10000]"
-          aria-label="Toggle menu"
+          className="md:hidden text-white text-3xl focus:outline-none z-[10000]"
+          aria-label="Toggle Menu"
         >
           {isMenuOpen ? "✕" : "☰"}
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* Mobile Menu */}
       <div
-        className={`fixed left-0 w-full bg-slate-900/95 border-b border-slate-800 backdrop-blur-xl md:hidden transition-all duration-300 z-[9998] ${
+        className={`fixed left-0 w-full bg-black/95 border-b border-gray-800 backdrop-blur-2xl md:hidden transition-all duration-300 z-[9998] ${
           scrolled ? "top-20" : "top-24"
         } ${
           isMenuOpen
@@ -75,17 +79,19 @@ const Navbar = () => {
             : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
-        <div className="flex flex-col p-6 space-y-4 shadow-2xl">
+        <div className="flex flex-col p-6 space-y-5 shadow-2xl">
+
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="text-slate-300 font-semibold border-b border-slate-800/50 pb-2 text-left hover:text-white transition-colors"
+              className="text-gray-300 hover:text-red-400 font-semibold border-b border-gray-800 pb-3 transition duration-300"
             >
               {link.name}
             </a>
           ))}
+
         </div>
       </div>
     </nav>
