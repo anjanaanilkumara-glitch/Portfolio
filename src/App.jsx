@@ -14,7 +14,8 @@ import "./App.css";
 function App() {
   return (
    <>
-   <Home/>
+   <div className="bg-gray-900">
+    <Home/>
    <About/>
    <Education/>
    <Skills/>
@@ -22,6 +23,7 @@ function App() {
    <Contact/>
    <Navbar/>
    <Footer/>
+   </div>
    </>
   );
 }
