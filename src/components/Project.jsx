@@ -2,26 +2,25 @@ import React from "react";
 
 function Project() {
     return (
-    
-    <section className="min-h-screen w-full flex flex-col md:flex-row bg-gray-900 overflow-hidden"> 
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black px-6 py-14">
 
             {/* Background Effects */}
-            <div className="absolute top-0 left-0 w-80 h-80 bg-gray-700 opacity-30 blur-3xl rounded-full animate-pulse"></div>
+            <div className="absolute top-0 left-0 w-80 h-80 bg-pink-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
 
-            <div className="absolute bottom-0 right-0 w-80 h-80 bg-gray-600 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+            <div className="absolute bottom-0 right-0 w-80 h-80 bg-blue-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
 
             {/* Main Container */}
-            <div className="relative z-10 w-full max-w-5xl bg-white/5 backdrop-blur-2xl border border-gray-700/40 rounded-[40px] shadow-2xl p-10 md:p-16">
+            <div className="relative z-10 w-full max-w-5xl bg-gray-900/70 backdrop-blur-2xl border border-white/10 rounded-[40px] shadow-2xl p-10 md:p-16">
 
                 {/* Heading */}
                 <div className="text-center mb-12">
 
-                    <p className="uppercase tracking-[6px] text-gray-400 font-semibold mb-4">
+                    <p className="uppercase tracking-[6px] text-pink-400 font-semibold mb-4">
                         Featured Work
                     </p>
 
                     <h1 className="text-5xl md:text-6xl font-extrabold text-white">
-                        My <span className="text-red-400">Project</span>
+                        My <span className="text-purple-400">Project</span>
                     </h1>
 
                     <div className="w-36 h-1 bg-gradient-to-r from-gray-600 to-red-500 mx-auto mt-5 rounded-full"></div>
@@ -29,7 +28,7 @@ function Project() {
                 </div>
 
                 {/* Project Card */}
-                <div className="bg-white/10 rounded-3xl shadow-xl p-8 md:p-10 hover:shadow-2xl transition duration-500 border border-gray-700/40">
+                <div className="bg-white/10 rounded-3xl shadow-xl p-8 md:p-10 hover:shadow-2xl transition duration-500 border border-white/10">
 
                     {/* Icon */}
                     <div className="flex items-center justify-center mb-6">
@@ -38,7 +37,7 @@ function Project() {
                         </div>
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-6">
+                    <h2 className="text-3xl md:text-4xl font-bold text-center text-purple-300 mb-6">
                         Doctor Appointment Booking App
                     </h2>
 
@@ -61,7 +60,7 @@ function Project() {
                 {/* Bottom Quote */}
                 <div className="mt-14 text-center">
 
-                    <div className="bg-white/5 border border-gray-700/40 rounded-3xl p-6 shadow-lg">
+                    <div className="bg-gray-900/50 border border-white/10 rounded-3xl p-6 shadow-lg">
 
                         <p className="text-lg italic text-gray-300 leading-relaxed">
                             "Creating technology that improves people's lives inspires me to learn and build more."

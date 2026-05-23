@@ -2,31 +2,31 @@ import React from "react";
 
 function Education() {
     return (
-    <section className="min-h-screen w-full flex flex-col md:flex-row bg-gray-900 overflow-hidden">
+        <section className="relative h-screen w-screen flex items-center justify-center overflow-hidden bg-black">
 
             {/* Background Glow Effects */}
-            <div className="absolute top-0 left-0 w-80 h-80 bg-gray-700 opacity-30 blur-3xl rounded-full animate-pulse"></div>
-            <div className="absolute bottom-0 right-0 w-80 h-80 bg-gray-600 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+            <div className="absolute top-0 left-0 w-80 h-80 bg-blue-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+            <div className="absolute bottom-0 right-0 w-80 h-80 bg-pink-500 opacity-20 blur-3xl rounded-full animate-pulse"></div>
 
             {/* Main Card */}
-            <div className="relative z-10 w-full max-w-5xl bg-white/5 backdrop-blur-2xl border border-gray-700/40 rounded-[40px] shadow-2xl p-10 md:p-16">
+            <div className="relative z-10 w-full max-w-5xl bg-gray-900/70 backdrop-blur-2xl border border-white/10 rounded-[40px] shadow-2xl p-10 md:p-16">
 
                 {/* Heading */}
                 <div className="text-center mb-10">
 
-                    <p className="uppercase tracking-[6px] text-gray-400 font-semibold mb-3">
+                    <p className="uppercase tracking-[6px] text-purple-400 font-semibold mb-3">
                         Academic Journey
                     </p>
 
                     <h1 className="text-5xl md:text-6xl font-extrabold text-white">
-                        My <span className="text-red-400">Education</span>
+                        My <span className="text-blue-400">Education</span>
                     </h1>
 
                     <div className="w-36 h-1 bg-gradient-to-r from-gray-600 to-red-500 mx-auto mt-4 rounded-full"></div>
                 </div>
 
                 {/* Education Card */}
-                <div className="bg-white/5 border border-gray-700/40 rounded-3xl shadow-xl p-8 md:p-10 hover:shadow-2xl transition duration-500">
+                <div className="bg-white/10 rounded-3xl shadow-xl p-8 md:p-10 border border-white/10">
 
                     <div className="flex flex-col md:flex-row items-center gap-8">
 
@@ -42,7 +42,7 @@ function Education() {
                                 Diploma in Computer Engineering
                             </h2>
 
-                            <p className="text-gray-300 text-lg mb-2">
+                            <p className="text-lg text-gray-300 mb-2">
                                 Government Women's Polytechnic College, TVM
                             </p>
 
@@ -64,15 +64,15 @@ function Education() {
 
                     <div className="flex flex-wrap justify-center gap-3">
 
-                        <span className="px-5 py-2 rounded-full bg-gray-800 text-gray-300 border border-gray-700 font-semibold">
+                        <span className="px-5 py-2 rounded-full bg-blue-500/20 text-blue-300 font-semibold border border-blue-400/20">
                             Programming
                         </span>
 
-                        <span className="px-5 py-2 rounded-full bg-gray-800 text-gray-300 border border-gray-700 font-semibold">
+                        <span className="px-5 py-2 rounded-full bg-purple-500/20 text-purple-300 font-semibold border border-purple-400/20">
                             Web Development
                         </span>
 
-                        <span className="px-5 py-2 rounded-full bg-gray-800 text-gray-300 border border-gray-700 font-semibold">
+                        <span className="px-5 py-2 rounded-full bg-pink-500/20 text-pink-300 font-semibold border border-pink-400/20">
                             Creativity
                         </span>
 
@@ -82,7 +82,7 @@ function Education() {
                 {/* Quote */}
                 <div className="mt-8 text-center">
 
-                    <p className="italic text-gray-400">
+                    <p className="italic text-gray-300">
                         “Education is the bridge between creativity and innovation.”
                     </p>
 

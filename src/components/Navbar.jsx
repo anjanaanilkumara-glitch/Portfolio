@@ -43,7 +43,7 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop Menu */}
+  
         <div className="hidden md:flex gap-8">
           {navLinks.map((link) => (
             <a
